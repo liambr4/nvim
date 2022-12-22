@@ -1,0 +1,9 @@
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.relativenumber = true
+vim.opt.hlsearch = false
+vim.opt.updatetime = 50
+vim.opt.swapfile = false
+vim.opt.tabstop = 4
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
