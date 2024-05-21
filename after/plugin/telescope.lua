@@ -6,6 +6,8 @@ vim.keymap.set('n', '<leader>fs', function()
 end)
 local action = require('telescope.actions')
 require('telescope').setup({
+	extensions = { require("telescope.themes").get_dropdown {}
+},
   defaults = {
 	  mappings = {
 		  i = {
@@ -15,5 +17,8 @@ require('telescope').setup({
 	  }
   },
 })
-
-
+local harpoonui = require("harpoon.ui")
+local harpoon = require("harpoon.mark")
+vim.keymap.set('n', '<leader>hpv', function() harpoonui.toggle_quick_menu() end)
+vim.keymap.set('n', '<leader>hpa', function() harpoon.add_file() end)
+vim.diagnostic.config({virtual_text = true})
